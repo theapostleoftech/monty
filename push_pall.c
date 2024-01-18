@@ -62,7 +62,10 @@ void monty_push(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	n = atoi(inputs.arg);
-
+	if (inputs.switch_flag == 0)
+		monty_add_node(stack, n);
+	else
+		monty_add_queue(stack, n);
 
 }
 

@@ -43,7 +43,7 @@ typedef struct instruction_s
  * @arg: argument values
  * @file: pointer to a file
  * @line: a line
- * @switch: change from stack to queue and vice versa
+ * @switch_flag: change from stack to queue and vice versa
  * Description: variable values
  */
 typedef struct input_s
@@ -51,11 +51,14 @@ typedef struct input_s
 	char *arg;
 	FILE *file;
 	char *line;
-	int switch;
+	int switch_flag;
 } input_t;
 extern input_t inputs;
 void monty_pall(stack_t **stack, unsigned int line_number);
 void monty_push(stack_t **stack, unsigned int line_number);
 void monty_free(stack_t *stack);
+int _run(char *line, stack_t **stack, unsigned int line_number, FILE *file);
+void monty_add_node(stack_t **stack, int element);
+void monty_add_queue(stack_t **stack, int element);
 
 #endif
