@@ -56,6 +56,11 @@ typedef struct input_s
 extern input_t inputs;
 void monty_pall(stack_t **stack, unsigned int line_number);
 void monty_push(stack_t **stack, unsigned int line_number);
+void monty_pint(stack_t **stack, unsigned int line_number);
+void monty_pop(stack_t **stack, unsigned int line_number);
+void monty_swap(stack_t **stack, unsigned int line_number);
+void monty_add(stack_t **stack, unsigned int line_number);
+void monty_nop(stack_t **stack, unsigned int line_number);
 void monty_free(stack_t *stack);
 int _run(char *line, stack_t **stack, unsigned int line_number, FILE *file);
 void monty_add_node(stack_t **stack, int element);
