@@ -6,13 +6,14 @@
  */
 void monty_free(stack_t *stack)
 {
-    stack_t *tmp;
+	stack_t *tmp;
 
-    tmp = stack;
-    while (stack)
-    {
-        tmp = stack->next;
-        free(stack);
-        stack = tmp;
-    }
+	tmp = stack;
+	while (stack)
+	{
+		tmp = stack->next;
+		free(stack);
+		stack = tmp;
+	}
 }
+
