@@ -40,17 +40,34 @@ void start_vglo(FILE *fd)
  */
 FILE *check_input(int argc, char *argv[])
 {
+<<<<<<< HEAD:main.c
 	FILE *fd;
 
 	if (argc == 1 || argc > 2)
+=======
+	char *line;
+	FILE *file;
+	size_t len = 0;
+	size_t read_line = 1;
+	stack_t *stack = NULL;
+	unsigned int line_number = 0;
+
+	if (argc != 2)
+>>>>>>> b0a29fd31ff29f9e1a3c5f6e1c8b513d2d56b5b7:files/main.c
 	{
 		dprintf(2, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
+<<<<<<< HEAD:main.c
 
 	fd = fopen(argv[1], "r");
 
 	if (fd == NULL)
+=======
+	file = fopen(argv[1], "r");
+	inputs.file = file;
+	if (!file)
+>>>>>>> b0a29fd31ff29f9e1a3c5f6e1c8b513d2d56b5b7:files/main.c
 	{
 		dprintf(2, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
@@ -79,8 +96,16 @@ int main(int argc, char *argv[])
 	nlines = getline(&vglo.buffer, &size, fd);
 	while (nlines != -1)
 	{
+<<<<<<< HEAD:main.c
 		lines[0] = _strtoky(vglo.buffer, " \t\n");
 		if (lines[0] && lines[0][0] != '#')
+=======
+		line = NULL;
+		read_line = getline(&line, &len, file);
+		inputs.line = line;
+		line_number++;
+		if (read_line > 0)
+>>>>>>> b0a29fd31ff29f9e1a3c5f6e1c8b513d2d56b5b7:files/main.c
 		{
 			f = get_opcodes(lines[0]);
 			if (!f)

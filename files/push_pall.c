@@ -41,7 +41,7 @@ void monty_push(stack_t **stack, unsigned int line_number)
 			i++;
 		for (; inputs.arg[i] != '\0'; i++)
 		{
-			if (inputs.arg[i] > 9 || inputs.arg[i] < 0)
+			if (inputs.arg[i] > 57 || inputs.arg[i] < 48)
 				f = 1;
 		}
 		if (f == 1)
