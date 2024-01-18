@@ -16,6 +16,8 @@ int _run(char *line, stack_t **stack, unsigned int line_number, FILE *file)
 		{"swap", monty_swap},
 		{"add", monty_add},
 		{"nop", monty_nop},
+		{"queue", monty_queue},
+		{"stack", monty_stack},
 		{NULL, NULL}
 	};
 	unsigned int i = 0;
