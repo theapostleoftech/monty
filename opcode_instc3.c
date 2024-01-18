@@ -1,7 +1,9 @@
 #include "monty.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * _div - divides the second element by the top element of the stack
+ * _div : divides the second element by the top element of the stack
  *
  * @doubly: head of the linked list
  * @cline: line number;

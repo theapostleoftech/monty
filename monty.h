@@ -63,7 +63,7 @@ typedef struct instruction_s
 
 extern global_t vglo;
 
-/* opcode_instructuions*/
+/* opcode_instc.c*/
 void _push(stack_t **stack, unsigned int line_number);
 void _pall(stack_t **stack, unsigned int line_number);
 void _pint(stack_t **doubly, unsigned int cline);
@@ -83,7 +83,7 @@ void _rotl(stack_t **doubly, unsigned int cline);
 void _rotr(stack_t **doubly, unsigned int cline);
 
 /*get function*/
-void (*get_opcodes(char *opc))(stack_t **stack, unsigned int line_number);
+void (*up_opcodes(char *opc))(stack_t **stack, unsigned int line_number);
 
 /*imported functions*/
 int _sch(char *s, char c);

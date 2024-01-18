@@ -1,5 +1,6 @@
 #include "monty.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * _strcmp - Function that compares two strings.
  * @s1: type str compared

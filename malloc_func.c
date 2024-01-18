@@ -1,5 +1,6 @@
 #include "monty.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * _calloc - concatenate two strings specially
  * @nmemb: number of elements

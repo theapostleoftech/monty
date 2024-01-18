@@ -1,7 +1,8 @@
 #include "monty.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * _push - pushes an element to the stack
+ * _push : pushes an element to the stack
  *
  * @doubly: head of the linked list
  * @cline: line number
