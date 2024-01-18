@@ -1,14 +1,14 @@
 #include "monty.h"
 /**
- * monty_sub - subtracts from the stack
- * @stack: pointer to the he3ad
- * @line_number: line number
- * Return: nothing
+  *monty_sub- subtration
+  *@stack: stack pointer
+  *@line_number: line_number
+  *Return: nothing
  */
 void monty_sub(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp;
-	int sub, nodes;
+	int s, nodes;
 
 	tmp = *stack;
 	for (nodes = 0; tmp != NULL; nodes++)
@@ -16,15 +16,14 @@ void monty_sub(stack_t **stack, unsigned int line_number)
 	if (nodes < 2)
 	{
 		fprintf(stderr, "L%d: can't sub, stack too short\n", line_number);
-		fclose(inputs.file);
-		free(inputs.line);
-		monty_free(*stack);
+		fclose(glinput.file);
+		free(glinput.line);
+		monty_free_stack(*stack);
 		exit(EXIT_FAILURE);
 	}
 	tmp = *stack;
-	sub = tmp->next->n - tmp->n;
-	tmp->next->n = sub;
+	s = tmp->next->n - tmp->n;
+	tmp->next->n = s;
 	*stack = tmp->next;
 	free(tmp);
 }
-
