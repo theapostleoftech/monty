@@ -1,4 +1,23 @@
 #include "monty.h"
+input_t inputs = {NULL, NULL, NULL, 0};
+/**
+ * monty_free - frees the list
+ * @stack: the stack head
+ * Return: nothing
+ */
+void monty_free(stack_t *stack)
+{
+	stack_t *temp;
+
+	temp = stack;
+	while (stack)
+	{
+		temp = stack->next;
+		free(stack);
+		stack = temp;
+	}
+}
+
 /**
  * main - monty code interpreter
  * @argc: agrgument count
@@ -31,6 +50,7 @@ int main(int argc, char *argv[])
 		line_number++;
 	}
 	free(line);
+	monty_free(stack);
 	fclose(file);
 	return (0);
 }

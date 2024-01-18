@@ -56,5 +56,6 @@ typedef struct input_s
 extern input_t inputs;
 void monty_pall(stack_t **stack, unsigned int line_number);
 void monty_push(stack_t **stack, unsigned int line_number);
+void monty_free(stack_t *stack);
 
 #endif
