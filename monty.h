@@ -54,6 +54,7 @@ typedef struct input_s
 	int switch_flag;
 } input_t;
 extern input_t inputs;
+
 void monty_pall(stack_t **stack, unsigned int line_number);
 void monty_push(stack_t **stack, unsigned int line_number);
 void monty_pint(stack_t **stack, unsigned int line_number);

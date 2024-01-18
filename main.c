@@ -1,17 +1,21 @@
+#define _GNU_SOURCE
 #include "monty.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+input_t inputs = {NULL, NULL, NULL, 0};
 /**
  * main - monty interpreter
  * @argc: argument count
  * @argv: argument vector
  * Return: zero on success
  */
-input_t inputs = {NULL, NULL, NULL, 0};
 int main(int argc, char *argv[])
 {
 	char *line = NULL;
 	FILE *file;
 	size_t len = 0;
-	size_t read_line = 0;
+	size_t read_line = 1;
 	stack_t *stack = NULL;
 	unsigned int line_number = 0;
 
@@ -40,5 +44,5 @@ int main(int argc, char *argv[])
 	}
 	monty_free(stack);
 	fclose(file);
-return (EXIT_SUCCESS);
+return (0);
 }
