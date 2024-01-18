@@ -66,7 +66,16 @@ void monty_free(stack_t *stack);
 int _run(char *line, stack_t **stack, unsigned int line_number, FILE *file);
 void monty_add_node(stack_t **stack, int element);
 void monty_add_queue(stack_t **stack, int element);
+void monty_sub(stack_t **stack, unsigned int line_number);
+void monty_div(stack_t **stack, unsigned int line_number);
+void monty_mul(stack_t **stack, unsigned int line_number);
+void monty_mod(stack_t **stack unsigned int line_number);
+void monty_pchar(stack_t **stack unsigned int line_number);
+void monty_pstr(stack_t **stack unsigned int line_number);
+void monty_rotl(stack **stack unsigned int line_number);
+void monty_rotr(stack_t **stack unsigned int line_number);
 void monty_stack(stack_t **stack, unsigned int line_number);
 void monty_queue(stack_t **stack, unsigned int line_number);
+
 
 #endif
