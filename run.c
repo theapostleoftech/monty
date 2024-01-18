@@ -12,6 +12,10 @@ int _run(char *line, stack_t **stack, unsigned int line_number, FILE *file)
 	instruction_t options[] = {
 		{"push", monty_push},
 		{"pall", monty_pall},
+		{"pint", monty_pint},
+		{"swap", monty_swap},
+		{"add", monty_add},
+		{"nop", monty_nop},
 		{NULL, NULL}
 	};
 	unsigned int i = 0;
