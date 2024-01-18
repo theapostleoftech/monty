@@ -12,7 +12,7 @@ input_t inputs = {NULL, NULL, NULL, 0};
  */
 int main(int argc, char *argv[])
 {
-	char *line = NULL;
+	char *line;
 	FILE *file;
 	size_t len = 0;
 	size_t read_line = 1;
@@ -26,13 +26,14 @@ int main(int argc, char *argv[])
 	}
 	file = fopen(argv[1], "r");
 	inputs.file = file;
-	if (file == NULL)
+	if (!file)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 	while (read_line > 0)
 	{
+		line = NULL;
 		read_line = getline(&line, &len, file);
 		inputs.line = line;
 		line_number++;
