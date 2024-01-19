@@ -71,8 +71,8 @@ void monty_pchar(stack_t **stack, unsigned int line_number);
 void monty_pstr(stack_t **stack, unsigned int line_number);
 void _rotl(stack_t **stack, unsigned int line_number);
 void _rotr(stack_t **stack, __attribute__((unused)) unsigned int line_number);
-void monty_add_node(stack_t **stack, int n);
-void monty_add_queue(stack_t **stack, int n);
+void monty_add_node(stack_t **stack, int element);
+void monty_add_queue(stack_t **stack, int element);
 void monty_queue(stack_t **stack, unsigned int line_number);
 void monty_stack(stack_t **stack, unsigned int line_number);
 #endif
