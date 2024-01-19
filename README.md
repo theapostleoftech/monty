@@ -1,1 +1,1 @@
-Monty Project by Chukwunonso Nwankpa and Deborah O.
+Monty Project by Chukwunonso Nwankpa and Deborah Ogwuche
