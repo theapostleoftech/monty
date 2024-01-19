@@ -1,1 +1,1 @@
-Monty Project by Chukwunonso Nwankpa and Deb
+Monty Project by Chukwunonso Nwankpa and Debo
