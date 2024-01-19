@@ -1,6 +1,6 @@
+#define _GNU_SOURCE
 #include "monty.h"
 #include <stdio.h>
-#define _GNU_SOURCE
 #include <stdlib.h>
 
 glinput_t glinput = {NULL, NULL, NULL, 0};

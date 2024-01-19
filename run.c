@@ -1,4 +1,4 @@
-#include "monty.h"p
+#include "monty.h"
 /**
 * _run - _runs the opcode
 * @stack: pointer to the linked list - stack
@@ -21,8 +21,8 @@ int _run(char *line, stack_t **stack, unsigned int line_number, FILE *file)
 				{"mod", monty_mod},
 				{"pchar", monty_pchar},
 				{"pstr", monty_pstr},
-				{"rotl", monty_rotl},
-				{"rotr", monty_rotr},
+				{"rotl", _rotl},
+				{"rotr", _rotr},
 				{"queue", monty_queue},
 				{"stack", monty_stack},
 				{NULL, NULL}
